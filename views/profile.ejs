@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        line-height: 1.6;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      nav {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+      }
+      nav a {
+        margin-right: 15px;
+        text-decoration: none;
+        color: #0066cc;
+      }
+      .profile-info {
+        background-color: #f5f5f5;
+        padding: 15px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div>
+          <a href="/">Home</a>
+          <a href="/profile">My Profile</a>
+        </div>
+        <div>
+          <span>Welcome, <%= username %></span>
+          <a href="/logout">Logout</a>
+        </div>
+      </nav>
+
+      <h1>My Profile</h1>
+
+      <div class="profile-info">
+        <h2>User Information</h2>
+        <p><strong>Username:</strong> <%= username %></p>
+        <p>This is a protected page that only logged-in users can see.</p>
+      </div>
+
+      <p>
+        This is just dummy text for the profile page. In a real application,
+        this would contain user-specific content and account settings.
+      </p>
+
+      <p>
+        You were able to access this page because you're authenticated with a
+        valid cookie.
+      </p>
+    </div>
+  </body>
+</html>

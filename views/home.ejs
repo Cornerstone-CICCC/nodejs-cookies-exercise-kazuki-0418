@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        line-height: 1.6;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      nav {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+      }
+      nav a {
+        margin-right: 15px;
+        text-decoration: none;
+        color: #0066cc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div>
+          <a href="/">Home</a>
+          <% if (username) { %>
+          <a href="/profile">My Profile</a>
+          <% } %>
+        </div>
+        <div>
+          <% if (username) { %>
+          <span>Welcome, <%= username %></span>
+          <a href="/logout">Logout</a>
+          <% } else { %>
+          <a href="/login">Login</a>
+          <% } %>
+        </div>
+      </nav>
+
+      <h1>Welcome to Our Website</h1>
+      <p>This is the home page of our cookie-based authentication exercise.</p>
+      <p>
+        This is just dummy text to demonstrate that the home page is accessible
+        to everyone, whether logged in or not.
+      </p>
+    </div>
+  </body>
+</html>
